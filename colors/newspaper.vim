@@ -2,7 +2,7 @@
 "
 " File:        newspaper.vim
 " Description: Vim color scheme file
-" Maintainer:  Jimmy Paul; Clayton Parker (cterm colors)
+" Maintainer:  Clayton Parker (cterm colors)
 "
 " =============================================================================
 
@@ -22,7 +22,7 @@ hi ColorColumn  guifg=NONE              guibg=#EEEEDD
 hi Cursor       guifg=bg                guibg=fg                gui=NONE
 
 hi CursorColumn guifg=NONE              guibg=#FFFDD0       gui=NONE
-hi CursorLine   guifg=NONE              guibg=#a4a061       gui=NONE
+hi CursorLine   guifg=NONE              guibg=#d6d4b9       gui=NONE
 
 hi CursorIM     guifg=bg                guibg=fg                gui=NONE
 hi lCursor      guifg=bg                guibg=fg                gui=NONE
@@ -33,15 +33,15 @@ hi DiffText     guifg=black             guibg=LightCyan1        gui=NONE
 hi Directory    guifg=#1600FF           guibg=bg                gui=NONE
 hi ErrorMsg     guifg=Red2              guibg=NONE              gui=NONE
 hi FoldColumn   guifg=SteelBlue4        guibg=LightYellow2      gui=bold
-hi Folded       guifg=SteelBlue4        guibg=Gainsboro      gui=italic
+hi Folded       guifg=SteelBlue4        guibg=Gainsboro         gui=italic
 
-hi IncSearch    guifg=black             guibg=khaki          gui=NONE
-hi Search       guifg=black             guibg=khaki          gui=NONE
-hi LineNr       guifg=#666677           guibg=#cccfbf    gui=NONE
+hi IncSearch    guifg=black             guibg=khaki             gui=NONE
+hi Search       guifg=black             guibg=khaki             gui=NONE
+hi LineNr       guifg=#666677           guibg=#cccfbf           gui=NONE
 hi MatchParen   guifg=black             guibg=LemonChiffon3     gui=bold
 hi ModeMsg      guifg=White             guibg=tomato1           gui=bold
 hi MoreMsg      guifg=SeaGreen4         guibg=bg                gui=bold
-hi NonText      guifg=LightCyan3        guibg=bg                gui=bold
+hi NonText      guifg=#497b8b        guibg=bg                gui=bold
 
 hi Pmenu        guifg=Orange4           guibg=LightYellow3      gui=NONE
 hi PmenuSel     guifg=ivory2            guibg=NavajoWhite4      gui=bold
@@ -62,7 +62,7 @@ hi StatusLineNC guifg=#F4F4EE           guibg=#99aabb    gui=italic
 hi TabLine      guifg=fg                guibg=LightGrey         gui=underline
 hi TabLineFill  guifg=fg                guibg=bg                gui=reverse
 hi TabLineSel   guifg=fg                guibg=bg                gui=bold
-hi Title        guifg=DeepSkyBlue3      guibg=bg                gui=NONE
+hi Title        guifg=#395f6c      guibg=bg                gui=bold
 hi VertSplit    guifg=#99aabb     guibg=#99aabb
 hi Visual       guifg=white             guibg=#0a7383      gui=NONE
 hi WarningMsg   guifg=Firebrick2        guibg=bg                gui=NONE
@@ -128,11 +128,12 @@ hi Constant     guifg=#881a1a        guibg=NONE      gui=NONE
 hi String   guifg=#1e5432       guibg=NONE      gui=NONE
 hi Boolean  guifg=IndianRed4        guibg=NONE      gui=NONE
 hi Identifier   guifg=brown3            guibg=NONE      gui=NONE
-hi Function     guifg=#714442          guibg=NONE      gui=NONE
-hi Statement    guifg=#0f58af           guibg=NONE      gui=NONE
+hi Function     guifg=#714442          guibg=NONE      gui=bold
+hi Statement    guifg=#1f5595           guibg=NONE      gui=NONE
 hi Keyword      guifg=#2c4869	        guibg=NONE      gui=NONE
 hi PreProc      guifg=blue1             guibg=NONE      gui=NONE
-hi Type         guifg=LightSlateBlue    guibg=NONE      gui=NONE
+hi Type         guifg=#421b4d     guibg=NONE      gui=NONE
+hi Conditional  guifg=#401c57          guibg=NONE      gui=NONE
 hi Special      guifg=#2c694a           guibg=NONE      gui=NONE
 hi Ignore       guifg=bg                guibg=NONE      gui=NONE
 hi Error        guifg=Red               guibg=NONE      gui=underline
@@ -164,4 +165,45 @@ hi diffAdded            guifg=#00AA00           guibg=NONE      gui=NONE
 hi diffLine             guifg=thistle4          guibg=NONE      gui=italic
 hi link diffSubname     diffLine
 hi link diffComment     Comment
+hi htmlLink             guifg=#666666          guibg=NONE      gui=underline,italic
+hi htmlTagName          guifg=NONE             guibg=NONE      gui=NONE
+hi link htmlScriptTag htmlTagName
+hi link htmlTagN htmlTagName
+hi link htmlEndTag htmlTagName
+hi link htmlSpecialTagName htmlTagName
 
+hi link cssRenderAttr Constant 
+hi link cssTextAttr Constant
+hi link cssUIAttr Constant
+hi link cssTableAttr Constant
+hi link cssColorAttr Constant
+hi link cssBoxAttr Constant
+hi link cssCommonAttr Constant
+hi link cssFunctionName Constant
+hi link cssRenderProp Type
+hi link cssBoxProp cssRenderProp
+
+hi link cssTagName Statement
+hi link cssClassName cssTagName
+hi link cssIdentifier cssTagName
+hi link cssPseudoClass cssTagName
+hi link cssPseudoClassId cssTagName
+
+hi cssBraces            guifg=fg            guibg=bg              gui=NONE
+hi javaScript           guifg=fg            guibg=NONE
+hi link javaScriptFunction Statement
+hi link javaScriptMember Statement
+hi link javaScriptValue Constant
+
+hi link objcClass Type
+hi link cocoaClass objcClass
+hi link objcSubclass objcClass
+hi link objcSuperclass objcClass
+hi link cocoaFunction Function
+hi link objcMethodName Identifier
+hi link objcMethodArg Normal
+hi link objcMessageName Identifier
+
+hi link javaType Statement
+
+hi link cppStatement  Statement
